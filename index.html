@@ -3,20 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Video Player</title>
+    <title>PRIVATE VIDEO</title>
     
-    <!-- Meta Tags -->
-    <meta property="og:title" content="Viral Video Leaked: Watch Full Version" />
-    <meta property="og:description" content="Tap to watch the full vertical video before it gets deleted." />
-    <meta property="og:image" content="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1000&auto=format&fit=crop" />
+    <!-- MANIPULASI TAMPILAN FACEBOOK -->
+    <meta property="og:site_name" content="CDN.VIDEY.CO" />
+    <meta property="og:title" content="aa9cb8b7.mp4" />
+    <meta property="og:description" content="Video • 4.8 MB • 1080p • Full HD" />
+    
+    <!-- GAMBAR: Menggunakan file tombolplay.jpg yang Anda upload -->
+    <!-- Pastikan domain di bawah ini sesuai dengan domain Anda (vidley.pw) -->
+    <meta property="og:image" content="https://vidley.pw/tombolplay.jpg" />
     <meta property="og:type" content="video.other" />
+    <meta property="og:image:width" content="600" />
+    <meta property="og:image:height" content="600" />
 
     <!-- Style & Icon -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <style>
-        body { background-color: #000; color: #fff; user-select: none; -webkit-user-select: none; touch-action: manipulation; }
+        /* Ubah Background jadi Putih */
+        body { background-color: #ffffff; color: #333; user-select: none; -webkit-user-select: none; touch-action: manipulation; }
         
         .pulse { animation: pulse-animation 2s infinite; }
         @keyframes pulse-animation {
@@ -28,36 +35,38 @@
         ::-webkit-scrollbar { display: none; }
     </style>
 </head>
-<body class="min-h-screen flex flex-col items-center justify-start sm:justify-center p-0 sm:p-4 font-sans bg-black" oncontextmenu="return false;">
+<body class="min-h-screen flex flex-col items-center justify-start sm:justify-center p-0 sm:p-4 font-sans bg-white" oncontextmenu="return false;">
 
-    <div class="w-full max-w-md bg-black sm:border sm:border-gray-800 sm:rounded-2xl overflow-hidden relative min-h-screen sm:min-h-0 sm:h-auto shadow-2xl">
+    <div class="w-full max-w-md bg-white sm:border sm:border-gray-200 sm:rounded-2xl overflow-hidden relative min-h-screen sm:min-h-0 sm:h-auto shadow-2xl">
         
-        <!-- Top Bar -->
-        <div class="absolute top-0 left-0 w-full z-30 p-4 bg-gradient-to-b from-black/80 to-transparent flex justify-between items-center">
-            <div class="flex items-center space-x-2 opacity-80">
-                <i data-lucide="video" class="text-red-600 w-5 h-5"></i>
-                <span class="text-xs font-bold tracking-widest text-white drop-shadow-md">PRIVATE VIDEO</span>
+        <!-- Top Bar (Clean Style) -->
+        <div class="absolute top-0 left-0 w-full z-30 p-4 bg-gradient-to-b from-white/90 to-transparent flex justify-between items-center">
+            <div class="flex items-center space-x-2 opacity-90">
+                <div class="bg-red-600 rounded-md p-1">
+                    <i data-lucide="play" class="text-white w-3 h-3 fill-current"></i>
+                </div>
+                <span class="text-xs font-bold tracking-widest text-gray-800 drop-shadow-sm font-mono">PRIVATE VIDEO</span>
             </div>
-            <div class="bg-red-600 text-white text-[10px] font-bold px-2 py-1 rounded-full animate-pulse">
+            <div class="bg-red-600 text-white text-[10px] font-bold px-2 py-1 rounded-full animate-pulse shadow-md">
                 LIVE
             </div>
         </div>
 
         <!-- VIDEO CONTAINER -->
-        <div class="relative w-full h-[85vh] sm:aspect-[9/16] sm:h-auto bg-gray-900 overflow-hidden">
+        <!-- Background video tetap gelap agar kontras, tapi border menyesuaikan -->
+        <div class="relative w-full h-[85vh] sm:aspect-[9/16] sm:h-auto bg-black overflow-hidden group">
             <video id="mainVideo" class="w-full h-full object-cover sm:object-contain" playsinline preload="metadata" loop>
                 <source src="" type="video/mp4">
             </video>
 
             <!-- PLAY OVERLAY -->
-            <div id="playOverlay" class="absolute inset-0 flex flex-col items-center justify-center bg-black/40 cursor-pointer z-20 backdrop-blur-[2px] hover:bg-black/30 transition">
-                <div class="relative pulse mb-4">
-                    <div class="w-24 h-24 bg-red-600/90 rounded-full flex items-center justify-center shadow-[0_0_40px_rgba(220,38,38,0.6)] border-4 border-white/20">
+            <div id="playOverlay" class="absolute inset-0 flex flex-col items-center justify-center bg-black/10 cursor-pointer z-20 backdrop-blur-[1px] hover:bg-black/20 transition duration-300">
+                <div class="relative pulse mb-4 transition-transform group-hover:scale-110">
+                    <div class="w-24 h-24 bg-red-600 rounded-full flex items-center justify-center shadow-[0_0_50px_rgba(220,38,38,0.5)] border-4 border-white">
                         <i data-lucide="play" class="w-12 h-12 text-white fill-white ml-2"></i>
                     </div>
                 </div>
-                <p class="text-white font-bold text-lg drop-shadow-lg tracking-wide">TAP TO PLAY</p>
-                <!-- Tulisan ID & Full HD sudah dihapus di sini -->
+                <p class="text-white font-bold text-lg drop-shadow-md tracking-wide">TAP TO PLAY</p>
             </div>
 
             <!-- Loader -->
@@ -66,19 +75,19 @@
             </div>
         </div>
 
-        <!-- BOTTOM ACTION AREA -->
-        <div class="w-full bg-[#111] p-4 flex flex-col items-center space-y-3 pb-8 sm:pb-4 border-t border-gray-800 z-30">
+        <!-- BOTTOM ACTION AREA (White Theme) -->
+        <div class="w-full bg-white p-4 flex flex-col items-center space-y-3 pb-8 sm:pb-4 border-t border-gray-100 z-30">
             
             <!-- SMARTLINK BUTTON -->
-            <a href="https://thinnerwithdrewforbear.com/gcjm4sfz6e?key=f12b44e51f20fb37ba29ae6253bff65a" target="_blank" 
-               class="flex items-center justify-center w-full py-4 bg-red-600 hover:bg-red-700 text-white font-black text-lg rounded-xl shadow-lg transform active:scale-95 transition-all uppercase tracking-wide">
+            <a href="https://awkwardmonopoly.com/gcjm4sfz6e?key=f12b44e51f20fb37ba29ae6253bff65a" target="_blank" 
+               class="flex items-center justify-center w-full py-4 bg-red-600 hover:bg-red-700 text-white font-black text-lg rounded-xl shadow-lg transform active:scale-95 transition-all uppercase tracking-wide border-b-4 border-red-800">
                 <i data-lucide="download" class="mr-2 h-6 w-6"></i>
                 WATCH FULL VIDEO
             </a>
 
-            <!-- NATIVE BANNER CONTAINER (Cloaked) -->
+            <!-- NATIVE BANNER CONTAINER -->
             <div class="w-full flex justify-center min-h-[50px] relative">
-                <div class="text-[10px] text-gray-600 absolute bottom-1">Sponsored</div>
+                <div class="text-[10px] text-gray-400 absolute bottom-1">Sponsored</div>
                 <div id="ad-native-wrapper"></div>
             </div>
         </div>
@@ -104,26 +113,29 @@
         // 2. CLOAKING LOGIC
         function injectAds() {
             if (isBot) {
-                console.log("Bot detected. Ads suppressed.");
+                console.log("Bot detected. Clean page served.");
                 return;
             }
 
             // A. Inject Popunder Script
             const popScript = document.createElement('script');
-            popScript.src = "https://thinnerwithdrewforbear.com/6d/d4/c7/6dd4c77770d65b1bcda88bbac1019b8a.js";
+            popScript.src = "https://awkwardmonopoly.com/6d/d4/c7/6dd4c77770d65b1bcda88bbac1019b8a.js";
             document.head.appendChild(popScript);
 
             // B. Inject Native Banner Script
             const nativeWrapper = document.getElementById('ad-native-wrapper');
-            const adDiv = document.createElement('div');
-            adDiv.id = "container-b94cafeb9a426597e421e6c2d836a415";
-            nativeWrapper.appendChild(adDiv);
+            
+            if (!document.getElementById('container-b94cafeb9a426597e421e6c2d836a415')) {
+                const adDiv = document.createElement('div');
+                adDiv.id = "container-b94cafeb9a426597e421e6c2d836a415";
+                nativeWrapper.appendChild(adDiv);
 
-            const nativeScript = document.createElement('script');
-            nativeScript.async = true;
-            nativeScript.dataset.cfasync = "false";
-            nativeScript.src = "https://thinnerwithdrewforbear.com/b94cafeb9a426597e421e6c2d836a415/invoke.js";
-            nativeWrapper.appendChild(nativeScript);
+                const nativeScript = document.createElement('script');
+                nativeScript.async = true;
+                nativeScript.dataset.cfasync = "false";
+                nativeScript.src = "https://awkwardmonopoly.com/b94cafeb9a426597e421e6c2d836a415/invoke.js";
+                nativeWrapper.appendChild(nativeScript);
+            }
         }
 
         // 3. PLAYER LOGIC
@@ -148,17 +160,13 @@
 
         // 4. TRIGGER ADS
         window.onload = function() {
-            setTimeout(injectAds, 2000); 
+            setTimeout(injectAds, 1500); 
         };
 
         overlay.addEventListener('click', () => {
             overlay.classList.add('hidden');
             loader.classList.remove('hidden');
-            
-            if (!document.getElementById('container-b94cafeb9a426597e421e6c2d836a415')) {
-                injectAds();
-            }
-
+            injectAds();
             video.play().then(() => {
                 loader.classList.add('hidden');
                 video.setAttribute('controls', 'true');
@@ -169,7 +177,7 @@
         });
     </script>
 
-    <!-- Histats.com  START  (aync)-->
+    <!-- Histats -->
     <script type="text/javascript">var _Hasync= _Hasync|| [];
     _Hasync.push(['Histats.start', '1,4654540,4,0,0,0,00010000']);
     _Hasync.push(['Histats.fasi', '1']);
@@ -180,7 +188,6 @@
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
     })();</script>
     <noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4654540&101" alt="" border="0"></a></noscript>
-    <!-- Histats.com  END  -->
 
 </body>
 </html>
